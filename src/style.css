@@ -1,0 +1,169 @@
+* {
+  font-family: "Lexend deca", sans-serif;
+}
+
+body {
+  background-color: #ff2013;
+}
+
+#drum {
+  display: grid;
+  align-self: start;
+  width: 256px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  border-radius: 5px;
+}
+
+#drum-machine {
+  background-color: #271f26;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding: 32px;
+  margin: 32px auto;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  #drum-container {
+    width: 90%;
+  }
+}
+
+#drum {
+  background-color: #211313;
+  padding: 16px;
+}
+
+.key {
+  border-radius: 5px;
+  height: 64px;
+  color: #bb7f07;
+  padding: 8px;
+  border: #bb7f07 solid 2px;
+  cursor: pointer;
+  position: relative;
+  transition: ease-in-out 0.1s all;
+}
+
+.key::after {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: 4px;
+  right: 4px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #bb7f07;
+}
+
+.key.press .key-text,
+.key.press::after {
+  color: #fff924;
+  text-shadow: 0px -40px 100px, 0px 0px 2px, 0px 0px 1em #ff0,
+    0px 0px 0.5em #ff0, 0px 0px 0.1em #ff0;
+}
+
+.key.press::after {
+  background-color: #fff924;
+}
+
+.key.press {
+  border-color: #fff924;
+}
+
+.key.press {
+  transform: scale(0.9);
+}
+
+#drum-control {
+  flex: 1;
+  padding: 0px 32px;
+}
+
+.btn {
+  position: relative;
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 10px;
+  padding-right: 24px;
+  display: block;
+  cursor: pointer;
+}
+
+.power-btn {
+  border: 2px solid #33964b;
+  color: #33964b;
+}
+
+.power-btn::after {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: 50%;
+  right: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #33964b;
+  transform: translate(-50%, 50%);
+}
+
+.power-btn.active {
+  color: #ffe;
+  text-shadow: 0px -40px 100px, 0px 0px 2px, 0px 0px 1em #0f0,
+    0px 0px 0.5em #0f0, 0px 0px 0.1em #0f0;
+}
+
+.power-btn.active::after {
+  background-color: #b9f2e0;
+}
+
+.power-btn.active {
+  border-color: #b9f2e0;
+}
+
+#display {
+  margin: 8px 0;
+  padding: 16px;
+  height: 1rem;
+  background-color: #211313;
+  border-radius: 5px;
+}
+
+#display.active {
+  color: #fff924;
+  text-shadow: 0px -40px 100px, 0px 0px 2px, 0px 0px 1em #ff0,
+    0px 0px 0.5em #ff0, 0px 0px 0.1em #ff0;
+}
+
+.glow-blue {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+#drum-logo {
+  padding: 8px;
+  text-align: center;
+}
+
+#drum-logo h3,
+.glow-blue {
+  font-weigt: regular;
+  color: #ffe;
+  text-shadow: 0px -40px 100px, 0px 0px 2px, 0px 0px 1em #00f,
+    0px 0px 0.5em #00f, 0px 0px 0.1em #00f;
+}
+
+#drum-logo h3 i {
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.2rem;
+  width: 3.2rem;
+  margin-bottom: 4px;
+  border: #ffe solid 3px;
+}
